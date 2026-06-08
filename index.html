@@ -76,8 +76,12 @@ nav.scrolled{padding:12px 16px}nav.scrolled .nav-pill{background:rgba(251,248,24
 #mnav.open .mlogo{transition-delay:.1s}#mnav.open a:nth-of-type(1){transition-delay:.16s}#mnav.open a:nth-of-type(2){transition-delay:.22s}#mnav.open a:nth-of-type(3){transition-delay:.28s}#mnav.open a:nth-of-type(4){transition-delay:.34s}#mnav.open a:nth-of-type(5){transition-delay:.4s}#mnav.open .cta-m{transition-delay:.46s}
 
 .hero{position:relative;min-height:100dvh;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url(img/room.jpg) center/cover;transform:scale(1.06)}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(38,30,30,.8) 0%,rgba(38,30,30,.5) 46%,rgba(94,67,72,.34) 100%)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#34232c 0%,#5e4348 46%,#8a5f68 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 78% 22%,rgba(220,174,166,.28),transparent 42%),
+  radial-gradient(circle at 12% 88%,rgba(189,160,111,.18),transparent 44%)}
+.hero-emblem{position:absolute;left:6%;top:50%;transform:translateY(-50%);z-index:2;font-size:clamp(13rem,30vw,26rem);color:rgba(248,243,236,.05);pointer-events:none}
+@media(max-width:980px){.hero-emblem{display:none}}
 .hero-in{position:relative;z-index:3;color:#f8f3ec;max-width:720px;padding-top:120px;padding-bottom:64px}
 .hero h1{font-family:var(--fa-d);font-weight:700;font-size:clamp(2.7rem,8.5vw,5.2rem);line-height:1.08;margin:18px 0 4px}
 .hero .lock{display:flex;align-items:center;gap:18px;margin-bottom:22px}
@@ -129,6 +133,11 @@ h2.title{font-family:var(--fa-d);font-weight:700;font-size:clamp(2.1rem,5vw,3.4r
 .feat{background:var(--cream)}
 .feat-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
 .feat-media .frame{height:520px}
+.brand-panel{width:100%;height:100%;border-radius:20px;background:linear-gradient(150deg,#5e4348 0%,#8a5f68 60%,#b3838d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:30px;position:relative;overflow:hidden}
+.brand-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.12),transparent 45%)}
+.brand-panel i{font-size:4.4rem;color:rgba(255,255,255,.92);position:relative}
+.brand-panel .bp-title{font-size:2.4rem;color:#fff;font-style:italic;position:relative}
+.brand-panel .bp-sub{font-family:var(--fs);font-size:.78rem;letter-spacing:.18em;color:rgba(255,255,255,.82);position:relative}
 .flist{list-style:none}
 .flist li{display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--line)}.flist li:last-child{border-bottom:1px solid var(--line)}
 .flist .fic{width:48px;height:48px;border-radius:50%;background:var(--mauve-soft);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--mauve-d);flex:none}
@@ -201,7 +210,6 @@ footer{background:#241f1b;color:#f1ead f;color:#f1eadf;padding:74px 0 28px}
       <a href="#about">عن الصالون</a>
       <a href="#services">خدماتنا</a>
       <a href="#why">لماذا نحن</a>
-      <a href="#gallery">المعرض</a>
       <a href="#visit">الموقع</a>
     </div>
     <a href="https://wa.me/966500753154?text=مرحباً،%20أرغب%20بحجز%20موعد%20في%20صالون%20أسينات" target="_blank" rel="noopener" class="nav-cta"><i class="ph-fill ph-whatsapp-logo"></i> احجزي الآن</a>
@@ -214,18 +222,18 @@ footer{background:#241f1b;color:#f1ead f;color:#f1eadf;padding:74px 0 28px}
   <a href="#about">عن الصالون</a>
   <a href="#services">خدماتنا</a>
   <a href="#why">لماذا نحن</a>
-  <a href="#gallery">المعرض</a>
   <a href="#visit">الموقع</a>
   <a href="https://wa.me/966500753154?text=مرحباً،%20أرغب%20بحجز%20موعد%20في%20صالون%20أسينات" target="_blank" rel="noopener" class="cta-m"><i class="ph-fill ph-whatsapp-logo"></i> احجزي عبر واتساب</a>
 </div>
 
 <header class="hero" id="home">
   <div class="hero-bg"></div>
+  <i class="ph-fill ph-flower-lotus hero-emblem"></i>
   <div class="wrap hero-in">
     <span class="eyebrow light rv"><i class="ph-fill ph-flower"></i> صالون نسائي · تبوك</span>
     <h1 class="rv d1">صالون أسينات</h1>
     <div class="lock rv d1"><span class="disp">ASENAT</span><span class="rule"></span></div>
-    <p class="rv d2">حيثُ تُدلَّلين كما تستحقّين. صالون أسينات للتزيين النسائي في تبوك — عناية بالشعر والبشرة والأظافر وجلسات سبا، بأيدٍ محترفة وأجواء راقية وهادئة.</p>
+    <p class="rv d2">جمالكِ يُزهر هنا. صالون أسينات للتزيين النسائي في تبوك — وجهةٌ راقية للعناية بالشعر والبشرة والأظافر وجلسات السبا، بأيدٍ محترفة وخصوصيةٍ تامة وذوقٍ رفيع.</p>
     <div class="hero-cta rv d3">
       <a href="https://wa.me/966500753154?text=مرحباً،%20أرغب%20بحجز%20موعد%20في%20صالون%20أسينات" target="_blank" rel="noopener" class="btn btn-wa">احجزي عبر واتساب <span class="ic"><i class="ph-fill ph-whatsapp-logo"></i></span></a>
       <a href="#services" class="btn btn-ghost on-dark">خدماتنا <span class="ic"><i class="ph ph-arrow-left"></i></span></a>
@@ -278,7 +286,7 @@ footer{background:#241f1b;color:#f1ead f;color:#f1eadf;padding:74px 0 28px}
 
 <section class="sec feat" id="why">
   <div class="wrap feat-grid">
-    <div class="feat-media rv"><div class="frame"><img src="img/nails.jpg" alt="عناية بالأظافر في أسينات"></div></div>
+    <div class="feat-media rv"><div class="frame"><div class="brand-panel"><i class="ph-fill ph-flower-lotus"></i><span class="bp-title disp">Care your hair</span><span class="bp-sub">ASENAT · أسينات للتزيين النسائي</span></div></div></div>
     <div class="rv d1">
       <span class="kicker">لماذا نحن · Why ASENAT</span>
       <h2 class="title">تجربةٌ <span class="accent">تستحقّينها</span></h2>
@@ -288,20 +296,6 @@ footer{background:#241f1b;color:#f1ead f;color:#f1eadf;padding:74px 0 28px}
         <li><div class="fic"><i class="ph ph-lock-key"></i></div><div><b>خصوصية وطاقم نسائي</b><span>أجواء مغلقة ومريحة بطاقمٍ نسائي وذوقٍ راقٍ في التعامل.</span></div></li>
         <li><div class="fic"><i class="ph ph-clock"></i></div><div><b>أوقات مرنة</b><span>أبوابنا مفتوحة يوميًا حتى الساعة 11 مساءً لراحتكِ.</span></div></li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section class="sec gallery" id="gallery">
-  <div class="wrap">
-    <div class="sec-head center rv">
-      <span class="kicker">المعرض · The Space</span>
-      <h2 class="title">أجواء <span class="accent">أسينات</span></h2>
-    </div>
-    <div class="g-grid">
-      <figure class="ga rv"><div class="gi" style="background-image:url(img/room.jpg)"></div></figure>
-      <figure class="gb rv d1"><div class="gi" style="background-image:url(img/logo.jpg);background-size:contain;background-repeat:no-repeat;background-color:#eee5d6"></div></figure>
-      <figure class="gc rv d2"><div class="gi" style="background-image:url(img/nails.jpg)"></div></figure>
     </div>
   </div>
 </section>
@@ -356,7 +350,6 @@ footer{background:#241f1b;color:#f1ead f;color:#f1eadf;padding:74px 0 28px}
         <a href="#about">عن الصالون</a>
         <a href="#services">خدماتنا</a>
         <a href="#why">لماذا نحن</a>
-        <a href="#gallery">المعرض</a>
       </div>
       <div class="foot-col">
         <h4>تواصلي معنا</h4>
